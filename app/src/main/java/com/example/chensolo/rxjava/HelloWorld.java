@@ -21,10 +21,10 @@ public class HelloWorld {
     public static void main(String[]args){
 
      
-        testStranform();
-        testStranform_flatMap();
-        testStranform_groupBy();
-        buffer();
+//        testStranform();
+//        testStranform_flatMap();
+//        testStranform_groupBy();
+//        buffer();
         Scan();
         /**
          * 第一次创建被观察者
