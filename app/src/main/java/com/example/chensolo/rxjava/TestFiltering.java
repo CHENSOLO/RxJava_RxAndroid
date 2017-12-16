@@ -33,17 +33,17 @@ public class TestFiltering {
         Observable.just(1,2,3,4).take(2).subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.print("Oncomplete():" + "\n");
+                System.out.println("Oncomplete():" + "\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError():" + arg0+"\n");
+                System.out.println("onError():" + arg0+"\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext():" + arg0+"\n");
+                System.out.println("onNext():" + arg0+"\n");
             }
         });
     }
@@ -54,17 +54,17 @@ public class TestFiltering {
         Observable.just(1,2,3,4).skipLast(2).subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.print("onComplete():"+ "\n");
+                System.out.println("onComplete():"+ "\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError():"+arg0+ "\n");
+                System.out.println("onError():"+arg0+ "\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext():"+arg0+ "\n");
+                System.out.println("onNext():"+arg0+ "\n");
             }
         });
     }
@@ -91,17 +91,17 @@ public class TestFiltering {
         }).sample(1, TimeUnit.SECONDS).subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.print("onComplete():"+ "\n");
+                System.out.println("onComplete():"+ "\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError():"+arg0+ "\n");
+                System.out.println("onError():"+arg0+ "\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext():"+arg0+ "\n");
+                System.out.println("onNext():"+arg0+ "\n");
             }
         });
     }
@@ -111,17 +111,17 @@ public class TestFiltering {
         Observable.just(1,2,3,4).last().subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.print("onComplete():" + "\n");
+                System.out.println("onComplete():" + "\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError():" +arg0+ "\n");
+                System.out.println("onError():" +arg0+ "\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext():" +arg0+ "\n");
+                System.out.println("onNext():" +arg0+ "\n");
             }
         });
     }
@@ -131,17 +131,17 @@ public class TestFiltering {
         Observable.just(321).ignoreElements().subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                    System.out.print("onComplete():" + "\n");
+                    System.out.println("onComplete():" + "\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError():" +arg0+ "\n");
+                System.out.println("onError():" +arg0+ "\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext():" +arg0+ "\n");
+                System.out.println("onNext():" +arg0+ "\n");
             }
         });
     }
@@ -151,17 +151,17 @@ public class TestFiltering {
         Observable.just(1,2,3,4,5).distinct().first().subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.print("onComplete():"+ "\n");
+                System.out.println("onComplete():"+ "\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError():"+ arg0+"\n");
+                System.out.println("onError():"+ arg0+"\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext():"+ arg0+"\n");
+                System.out.println("onNext():"+ arg0+"\n");
             }
         });
     }
@@ -176,17 +176,17 @@ public class TestFiltering {
         }).subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.print("onComplete():" +"\n");
+                System.out.println("onComplete():" +"\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError():" +arg0+"\n");
+                System.out.println("onError():" +arg0+"\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNex():" +arg0+"\n");
+                System.out.println("onNex():" +arg0+"\n");
             }
         });
     }
@@ -196,17 +196,17 @@ public class TestFiltering {
         Observable.just(1,2,3,4,5).elementAt(3).subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.print("onComplete"+"\n");
+                System.out.println("onComplete"+"\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError"+arg0+"\n");
+                System.out.println("onError"+arg0+"\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext"+arg0+"\n");
+                System.out.println("onNext"+arg0+"\n");
             }
         });
     }
@@ -216,17 +216,17 @@ public class TestFiltering {
         Observable.just(1,2,2,1,3).distinct().subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.print("onComplere();"+"\n");
+                System.out.println("onComplere();"+"\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError();"+arg0+"\n");
+                System.out.println("onError();"+arg0+"\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext();"+arg0+"\n");
+                System.out.println("onNext();"+arg0+"\n");
             }
         });
     }
@@ -252,17 +252,17 @@ public class TestFiltering {
         }).debounce(1, TimeUnit.SECONDS).subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                     System.out.print("onComplete():"+ "\n");
+                     System.out.println("onComplete():"+ "\n");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError():"+arg0+ "\n");
+                System.out.println("onError():"+arg0+ "\n");
             }
 
             @Override
             public void onNext(Integer arg0) {
-                System.out.print("onNext():"+arg0+ "\n");
+                System.out.println("onNext():"+arg0+ "\n");
             }
         });
     }

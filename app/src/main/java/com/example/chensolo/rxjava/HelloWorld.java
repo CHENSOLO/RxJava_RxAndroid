@@ -42,17 +42,17 @@ public class HelloWorld {
         Subscriber subscriber = new Subscriber<String>() {
             @Override
             public void onCompleted() {
-             System.out.print("onCompleted() ");
+             System.out.println("onCompleted() ");
             }
 
             @Override
             public void onError(Throwable arg0) {
-                System.out.print("onError() ");
+                System.out.println("onError() ");
             }
 
             @Override
             public void onNext(String arg0) {
-                System.out.print("onNext() :"+ arg0);
+                System.out.println("onNext() :"+ arg0);
             }
         };
         /**
@@ -81,7 +81,7 @@ public class HelloWorld {
 
             @Override
             public void onNext(Integer arg0) {
-      System.out.print("onNext:" + arg0);
+      System.out.println("onNext:" + arg0);
             }
         });
 
@@ -103,7 +103,7 @@ public class HelloWorld {
 
             @Override
             public void onNext(List<Integer> arg0) {
-             System.out.print("onNext:" + arg0);
+             System.out.println("onNext:" + arg0);
             }
         });
 
@@ -142,7 +142,7 @@ public class HelloWorld {
 
                          @Override
                          public void onNext(Integer data) {
-          System.out.print("group:"+ arg0.getKey()+" data:"+data);
+          System.out.println("group:"+ arg0.getKey()+" data:"+data);
                          }
                      });
             }
@@ -164,7 +164,7 @@ public class HelloWorld {
         }).subscribe(new Subscriber<String>() {
             @Override
             public void onCompleted() {
-                System.out.print("onCompleted:");
+                System.out.println("onCompleted:");
             }
 
             @Override
@@ -174,7 +174,7 @@ public class HelloWorld {
 
             @Override
             public void onNext(String arg0) {
-           System.out.print("onNext:" + arg0);
+           System.out.println("onNext:" + arg0);
             }
         });
     }
@@ -192,7 +192,7 @@ public class HelloWorld {
         }).subscribe(new Subscriber<String>() {
             @Override
             public void onCompleted() {
-                     System.out.print("onCompleted:");
+                     System.out.println("onCompleted:");
             }
 
             @Override
@@ -202,7 +202,7 @@ public class HelloWorld {
 
             @Override
             public void onNext(String arg0) {
-                System.out.print("onNext:" + arg0);
+                System.out.println("onNext:" + arg0);
                 Log.i(TAG, "onNext: arg0");
             }
         });
